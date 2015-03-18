@@ -1,10 +1,12 @@
 #!/bin/sh
 # usage: ./render-movie.sh [<snapshotsDir>] [<movieFile>]
 
+# --- config ---
 MOVIE_WIDTH="1280"
 MOVIE_HEIGHT="720"
 MOVIE_BITRATE="8000"
 USE_SYMLINKS="1"
+# --- /config ---
 
 TIMELAPSE_HOME="`dirname "$0"`"
 if [ "$TIMELAPSE_HOME" = "." ]; then

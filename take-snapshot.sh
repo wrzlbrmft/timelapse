@@ -1,6 +1,7 @@
 #!/bin/sh
 # usage: ./take-snapshot.sh [<device>] [<snapshotsDir>]
 
+# --- config ---
 RESOLUTION="1280x720"
 TIMESTAMP="%Y-%m-%d %H:%M"
 TIMESTAMP_POSITION="bottom" # top or bottom
@@ -9,6 +10,7 @@ TIMESTAMP_SIZE="16"
 TIMESTAMP_COLOR="#00FFFFFF" # #AARRGGBB (Alpha, Red, Green, Blue)
 FORMAT="jpg" # jpg or png
 QUALITY="95" # jpg: 0-95, png: 0-9 (the higher the better)
+# --- /config ---
 
 TIMELAPSE_HOME="`dirname "$0"`"
 if [ "$TIMELAPSE_HOME" = "." ]; then
