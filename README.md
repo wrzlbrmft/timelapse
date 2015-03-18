@@ -1,9 +1,10 @@
 # timelapse
 
 With *timelapse* you can create movies using time-lapse photography taken with
-your webcam. The result can look something like this:
+your webcam. The result can look something like this
+(watch on [YouTube](https://www.youtube.com/watch?v=NIG4t16QVZU)):
 
-[(EXAMPLE)](https://www.youtube.com/watch?v=NIG4t16QVZU)
+[![Example video on YouTube](https://raw.githubusercontent.com/wrzlbrmft/timelapse/master/example.jpg)](https://www.youtube.com/watch?v=NIG4t16QVZU)
 
 *(Rendered out of ~15,000 snapshots taken from my office window.)*
 
