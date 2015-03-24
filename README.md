@@ -18,7 +18,7 @@ of them.
 
 ## Requirements
 
-* `/bin/sh`
+* `/bin/bash`
 * [fswebcam](https://github.com/fsphil/fswebcam)
 * [Mencoder from MPlayer](http://www.mplayerhq.hu/)
 * A webcam ;-)

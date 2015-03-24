@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # usage: ./take-snapshot.sh [<device>] [<snapshotsDir>]
 
 # --- config ---

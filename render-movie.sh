@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # usage: ./render-movie.sh [<snapshotsDir>] [<movieFile>]
 
 # --- config ---
@@ -27,6 +27,8 @@ TMP_DIR="$TIMELAPSE_HOME/tmp"
 mkdir -p "$TMP_DIR"
 
 j=0
+_IFS="$IFS"
+IFS=$'\n'
 for i in $( find "$SNAPSHOTS_DIR" -type f -name "snapshot-*.jpg" -o -name "snapshot-*.png" | sort ); do
 	SRC="$SNAPSHOTS_DIR/`basename "$i"`"
 	FORMAT="`basename "$i" | awk -F . '{print $NF}'`"
@@ -38,6 +40,7 @@ for i in $( find "$SNAPSHOTS_DIR" -type f -name "snapshot-*.jpg" -o -name "snaps
 	fi
 	j=`expr $j + 1`
 done
+IFS="$_IFS"
 
 mencoder "mf://$TMP_DIR/*.$FORMAT" -mf w=$MOVIE_WIDTH:h=$MOVIE_HEIGHT:fps=24:type=$FORMAT \
 	-ovc lavc -lavcopts vcodec=mpeg4:mbd=2:trell:vbitrate=$MOVIE_BITRATE -oac copy -o "$MOVIE_FILE"
