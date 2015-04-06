@@ -103,3 +103,10 @@ To copy the snapshot files instead of using symlinks, simply change the
 USE_SYMLINKS="0"
 ```
 
+Depending on the number of snapshot files, copying them can take a while and
+also requires more disk space of course.
+
+**NOTE:** The temporary directory is not automatically removed afterwards. I did
+not want to *rm -rf* a directory from a script variable (reminds me of
+[this famous bug](https://github.com/ValveSoftware/steam-for-linux/issues/3671)).
+
