@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # usage: ./render-movie.sh [<snapshotsDir>] [<movieFile>]
 
 # --- config ---
@@ -46,4 +46,3 @@ mencoder "mf://$TMP_DIR/*.$FORMAT" -mf w=$MOVIE_WIDTH:h=$MOVIE_HEIGHT:fps=24:typ
 	-ovc lavc -lavcopts vcodec=mpeg4:mbd=2:trell:vbitrate=$MOVIE_BITRATE -oac copy -o "$MOVIE_FILE"
 
 #rm -rf "$TMP_DIR"
-

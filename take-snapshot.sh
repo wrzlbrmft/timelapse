@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # usage: ./take-snapshot.sh [<device>] [<snapshotsDir>]
 
 # --- config ---
@@ -41,4 +41,3 @@ fswebcam --quiet --device "$DEVICE" --resolution "$RESOLUTION" \
 	--timestamp "$TIMESTAMP" \
 	--$FORMAT_ARG $QUALITY \
 	"$SNAPSHOTS_DIR/snapshot-`date +%Y-%m-%d-%H-%M`.$FORMAT"
-
